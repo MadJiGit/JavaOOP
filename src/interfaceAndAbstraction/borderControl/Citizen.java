@@ -1,5 +1,5 @@
 package interfaceAndAbstraction.borderControl;
-
+// for github test only
 public class Citizen implements Identifiable {
 
     private final String name;
