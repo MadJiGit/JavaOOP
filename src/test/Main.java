@@ -1,27 +1,25 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
+
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        int counter = 1;
+        List<String> fish = new ArrayList<>();
+        fish.add("First");
+        fish.add("Second");
+        fish.add("Third");
 
-        while (scanner.hasNextLine()) {
+        System.out.println(fish.stream().map(Object::toString)
+                .collect(Collectors.joining(", ")));
 
-            String animalType = scanner.nextLine();
-            if (animalType.isEmpty()){
-                System.out.println("Empty");
-                break;
-            } else if (animalType.isBlank()){
-                System.out.println("Blank");
-                break;
-            }
-            System.out.println(counter++ + " " + animalType);
-
-        }
-
-        scanner.close();
     }
 }
+
+
